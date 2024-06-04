@@ -1,0 +1,43 @@
+.text-item-coffee {
+	font-size: 14px;
+}
+
+.nav-cart-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.nav-cart-icon a {
+ 	display: flex;
+    align-items: center;
+    color: inherit; /* Menjaga warna sesuai dengan navbar */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+.nav-cart-icon i {
+    font-size: 1.2rem; /* Ukuran ikon, sesuaikan sesuai kebutuhan */
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+.cart-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.cart-item img {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+}
+.cart-item-info {
+	flex: 1;
+	margin-left: 10px;
+}
