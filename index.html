@@ -3,12 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Patok Store</title>
+	<title>Patok Store Coffee</title>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="style.css">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3622977185777506"
-     crossorigin="anonymous"></script>
+</head>
 </head>
 <body>
 	
@@ -22,7 +21,7 @@
 	        <div class="collapse navbar-collapse" id="navbarNav">
 	            <ul class="navbar-nav ms-auto">
 	                <li class="nav-item">
-	                    <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+	                    <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
 	                </li>
 	                <li class="nav-item">
 	                    <a class="nav-link" href="#produk">Produk</a>
@@ -54,7 +53,7 @@
 	            </div>
 	            <div class="modal-footer">
 	                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-	                <a href="https://wa.me/+628990763604" class="btn btn-primary" target="_blank">Beli Sekarang</a>
+	                <button type="button" class="btn btn-primary" onclick="checkout()">Beli Sekarang</button>
 	            </div>
 	        </div>
 	    </div>
@@ -63,8 +62,8 @@
 	<!-- Title -->
 	<div class="p-5 mb-4 bg-dark text-white rounded-3">
 		<div class="container py-5">
-			<h1 class="display-5 fw-bold" id="typing">Patok Store</h1>
-			<p class="col-md-8 fs-5">Patok Store adalah toko online dropshipping yang menawarkan berbagai macam produk menarik dari berbagai kategori, seperti Coffee Hand Grinder dll, Web toko ini akan saya tambahkan beberapa produk.</p>
+			<h1 class="display-6 fw-bold" id="typing">PATOK STORE COFFEE</h1>
+			<p class="col-md-8 fs-5">Di sini kami percaya bahwa setiap cangkir kopi adalah sebuah petualangan rasa yang layak dinikmati dengan sepenuh hati. Kami bangga menjadi destinasi utama bagi para pencinta kopi yang mencari biji kopi berkualitas tinggi dan peralatan penggiling kopi yang andal.</p>
 			<a href="#" class="btn btn-primary btn-lg" type="button">Belanja sekarang <i class="bi bi-bag"></i></a>
 		</div>
 	</div>
@@ -84,7 +83,7 @@
 						<img src="barang/rekomendasi/timemore_xlite.webp" class="card-img-top">
 						<div class="card-body">
 							<h5 class="card-title">Timemore Xlite</h5>
-							<h6>Rp1.935.000 - Rp2.010.000</h6>
+							<h6>Rp1.835.000 - Rp1.995.000</h6>
                     		<a href="#rekomendasi" class="btn btn-secondary mb-2" onclick="addToCart('Timemore Xlite', 'Rp1.835.000 - Rp1.995.000', 'barang/rekomendasi/timemore_xlite.webp')">Checkout <i class="bi bi-cart-plus"></i></a>
 						</div>
 					</div>
@@ -95,7 +94,7 @@
 						<img src="barang/rekomendasi/server.jfif" class="card-img-top">
 						<div class="card-body">
 							<h5 class="card-title">Hario V60 Coffee Server 700ml</h5>
-							<h6>Rp260.000</h6>
+							<h6>Rp250.000</h6>
 							<a href="#rekomendasi" class="btn btn-secondary mb-2" onclick="addToCart('Hario v60 Coffee Server', 'Rp250.000', 'barang/rekomendasi/server.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
 						</div>
 					</div>
@@ -106,7 +105,7 @@
 						<img src="barang/rekomendasi/brewista.jfif" class="card-img-top">
 						<div class="card-body">
 							<h5 class="card-title">Brewista Kettle 600ml</h5>
-							<h6>Rp1.545.000</h6>
+							<h6>Rp1.535.000</h6>
 							<a href="#rekomendasi" class="btn btn-secondary mb-2" onclick="addToCart('Brewista Kettle 600ml', 'Rp1.535.000', 'barang/rekomendasi/brewista.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
 						</div>
 					</div>
@@ -130,6 +129,7 @@
 	<!-- Search Item End -->
 
 	<!-- Item Barang -->
+
 	<div class="container text-center" id="produk">
 		<div class="row align-items-start mt-5">
 			
@@ -200,9 +200,9 @@
 				</div>
 			</div>
 
-
 		</div>
 	</div>
+
 	<!-- Item Barang End -->
 
 	<!-- Item Barang2 -->
@@ -319,7 +319,6 @@
 		</footer>
 	</div>
 
-	<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
 	<script type="text/javascript" src="vanilla-tilt.min.js"></script>
 	<script type="text/javascript">
 		VanillaTilt.init(document.querySelectorAll(".rekomendation"), {
@@ -330,25 +329,43 @@
         //It also supports NodeList
         // VanillaTilt.init(document.querySelectorAll(".your-element"));
     </script>
-    <script type="text/javascript" src="data.js"></script>
 
     <script>
+
+    	let cart = [];
+
 	    function addToCart(productName, productPrice, productImage) {
-	        // Ambil data keranjang dari Local Storage
-	        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+		    // Ambil data keranjang dari Local Storage
+		    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-	        // Tambahkan produk ke keranjang
-	        cart.push({ name: productName, price: productPrice, image: productImage });
+		    // Tambahkan produk ke keranjang
+		    cart.push({ name: productName, price: productPrice, image: productImage });
 
-	        // Simpan kembali keranjang ke Local Storage
-	        localStorage.setItem('cart', JSON.stringify(cart));
+		    // Simpan kembali keranjang ke Local Storage
+		    localStorage.setItem('cart', JSON.stringify(cart));
 
-	        // Perbarui jumlah item di ikon keranjang
-	        updateCartCount();
+		    // Perbarui jumlah item di ikon keranjang
+		    updateCartCount();
 
-	        // Perbarui tampilan keranjang
-	        updateCartDisplay();
-	    }
+		    // Perbarui tampilan keranjang
+		    updateCartDisplay();
+		}
+
+	    function checkout() {
+		    console.log('checkout clicked'); // Debugging
+
+		    // Ambil data keranjang dari Local Storage
+		    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+		    let message = 'Saya ingin memesan produk berikut:\n';
+		    cart.forEach(item => {
+		        message += `- ${item.name} (${item.price})\n`;
+		    });
+		    const encodedMessage = encodeURIComponent(message);
+		    const whatsappUrl = `https://wa.me/+628990763604?text=${encodedMessage}`;
+		    console.log(whatsappUrl); // Debugging
+		    window.open(whatsappUrl, '_blank');
+		}
 
 	    function removeFromCart(index) {
 	        // Ambil data keranjang dari Local Storage
