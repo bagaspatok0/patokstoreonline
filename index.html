@@ -7,6 +7,11 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
 </head>
 </head>
 <body>
@@ -23,6 +28,16 @@
 	                <li class="nav-item">
 	                    <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
 	                </li>
+	               
+	                <!-- <li class="nav-item dropdown">
+    					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">List Item</a>
+    					<ul class="dropdown-menu">
+      						<li><a class="dropdown-item" href="#">Hand Grinder</a></li>
+						    <li><a class="dropdown-item" href="#">Coffee Bag</a></li>
+							<li><a class="dropdown-item" href="#">Dripper</a></li>
+    					</ul>
+  					</li> -->
+
 	                <li class="nav-item">
 	                    <a class="nav-link" href="#produk">Produk</a>
 	                </li>
@@ -38,7 +53,7 @@
 	</nav>
 	<!-- Navbar End -->
 
-	<!-- Modal untuk Keranjang Belanja -->
+	<!-- Keranjang Belanja -->
 	<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
 	    <div class="modal-dialog">
 	        <div class="modal-content">
@@ -69,7 +84,7 @@
 	</div>
 	<!-- Title End -->
 
-	<!-- Card -->
+	<!-- Rekomendasi -->
 	<div class="container" id="rekomendasi">
 		<h1 class="text-black">Ｒｅｋｏｍｅｎｄａｓｉ</h1>	
 	</div>
@@ -83,53 +98,55 @@
 						<img src="barang/rekomendasi/timemore_xlite.webp" class="card-img-top">
 						<div class="card-body">
 							<h5 class="card-title">Timemore Xlite</h5>
-							<h6>Rp1.835.000 - Rp1.995.000</h6>
-                    		<a href="#rekomendasi" class="btn btn-secondary mb-2" onclick="addToCart('Timemore Xlite', 'Rp1.835.000 - Rp1.995.000', 'barang/rekomendasi/timemore_xlite.webp')">Checkout <i class="bi bi-cart-plus"></i></a>
+							<h6>Rp1.840.000 - Rp2.000.000</h6>
+                    		<a href="#rekomendasi" class="btn btn-secondary mb-2" onclick="addToCart('Timemore Xlite', 'Rp1.840.000 - Rp2.000.000', 'barang/rekomendasi/timemore_xlite.webp')">Checkout <i class="bi bi-cart-plus"></i></a>
+							<button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/rekomendasi/timemorexlite.html">Detail</button>
 						</div>
 					</div>
 				</div>
-
+				
 				<div class="col-sm-4 text-center mb-4">
 					<div class="card card-style rekomendation">
 						<img src="barang/rekomendasi/server.jfif" class="card-img-top">
 						<div class="card-body">
 							<h5 class="card-title">Hario V60 Coffee Server 700ml</h5>
-							<h6>Rp250.000</h6>
-							<a href="#rekomendasi" class="btn btn-secondary mb-2" onclick="addToCart('Hario v60 Coffee Server', 'Rp250.000', 'barang/rekomendasi/server.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+							<h6>Rp255.000</h6>
+							<a href="#rekomendasi" class="btn btn-secondary mb-2" onclick="addToCart('Hario v60 Coffee Server', 'Rp255.000', 'barang/rekomendasi/server.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+							<button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/rekomendasi/harioserver.html">Detail</button>
 						</div>
 					</div>
 				</div>
-
+				
 				<div class="col-sm-4 text-center mb-4">
 					<div class="card card-style rekomendation">
 						<img src="barang/rekomendasi/brewista.jfif" class="card-img-top">
 						<div class="card-body">
 							<h5 class="card-title">Brewista Kettle 600ml</h5>
-							<h6>Rp1.535.000</h6>
-							<a href="#rekomendasi" class="btn btn-secondary mb-2" onclick="addToCart('Brewista Kettle 600ml', 'Rp1.535.000', 'barang/rekomendasi/brewista.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+							<h6>Rp1.540.000</h6>
+							<a href="#rekomendasi" class="btn btn-secondary mb-2" onclick="addToCart('Brewista Kettle 600ml', 'Rp1.540.000', 'barang/rekomendasi/brewista.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+							<button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/rekomendasi/kettlebrewista.html">Detail</button>
 						</div>
 					</div>
 				</div>
-
+				
 			</div>
 		</div>
 	</section>
-	<!-- Card End -->
-
+	
+	<!-- Rekomendasi End -->
+	
 	<!-- Search Item -->
-
+	
 	<div class="container patokstore-search">
 		<div class="input-group flex-nowrap mt-4">
-			<h1 class="title">Produk <i class="bi bi-bag-dash"></i></h1>
-			<input type="text" class="form-control ms-3" placeholder="Cari Produk Yang Kamu Inginkan">
-			<button class="btn btn-outline-secondary ms-3">Cari <i class="bi bi-search"></i></button>
+			<h4 class="title">Kopi Terbaik Pilihan Untukmu <i class="bi bi-bag-dash"></i></h4>
 		</div>
 	</div>
-
+	
 	<!-- Search Item End -->
-
-	<!-- Item Barang -->
-
+	
+	<!-- Item Barang1 -->
+	
 	<div class="container text-center" id="produk">
 		<div class="row align-items-start mt-5">
 			
@@ -140,10 +157,11 @@
 						<h6 class="card-title text-item-coffee">Coffe Journey Arabika10</h6>
 						<p>Rp52.900</p>
 						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Coffee Journey Arabika10', 'Rp52.900', 'barang/coffee_bag/arutala/coffee_journey.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/arutala/journey.html">Detail</button>
 					</div>
 				</div>
 			</div>
-
+			
 			<div class="col">
 				<div data-tilt data-tilt-axis="x" class="card barang mb-4">
 					<img src="barang/coffee_bag/arutala/ethiopia_sidamo.jfif" class="card-img-top">
@@ -151,10 +169,11 @@
 						<h6 class="card-title text-item-coffee">Ethiopia Sidamo 200gr</h6>
 						<p>Rp92.900</p>
 						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Ethiopia Sidamo 200gr', 'Rp92.900', 'barang/coffee_bag/arutala/ethiopia_sidamo.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/arutala/ethiopia.html">Detail</button>
 					</div>
 				</div>
 			</div>
-
+			
 			<div class="col">
 				<div data-tilt data-tilt-axis="x" class="card barang mb-4">
 					<img src="barang/coffee_bag/arutala/gayo_wine.jfif" class="card-img-top">
@@ -162,10 +181,11 @@
 						<h6 class="card-title text-item-coffee">Gayo Wine 200gr</h6>
 						<p>Rp87.900</p>
 						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Gayo Wine 200gr', 'Rp87.900', 'barang/coffee_bag/arutala/gayo_wine.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/arutala/wine.html">Detail</button>
 					</div>
 				</div>
 			</div>
-
+			
 			<!--  -->
 			<div class="col">
 				<div data-tilt data-tilt-axis="x" class="card barang mb-4">
@@ -174,10 +194,11 @@
 						<h6 class="card-title text-item-coffee">Malabar 200gr</h6>
 						<p>Rp71.900</p>
 						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Malabar 200gr', 'Rp71.900', 'barang/coffee_bag/arutala/malabar.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/arutala/malabar.html">Detail</button>
 					</div>
 				</div>
 			</div>
-
+			
 			<div class="col">
 				<div data-tilt data-tilt-axis="x" class="card barang mb-4">
 					<img src="barang/coffee_bag/arutala/naturalseries_bali.jfif" class="card-img-top">
@@ -185,10 +206,11 @@
 						<h6 class="card-title text-item-coffee">Bali 200gr</h6>
 						<p>Rp77.900</p>
 						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Bali 200gr', 'Rp77.900', 'barang/coffee_bag/arutala/naturalseries_bali.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/arutala/bali.html">Detail</button>
 					</div>
 				</div>
 			</div>
-
+			
 			<div class="col">
 				<div data-tilt data-tilt-axis="x" class="card barang mb-4">
 					<img src="barang/coffee_bag/arutala/naturalseries_kerinci.jfif" class="card-img-top">
@@ -196,15 +218,16 @@
 						<h6 class="card-title text-item-coffee">Kerinci 200gr</h6>
 						<p>Rp77.900</p>
 						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Kerinci 200gr', 'Rp77.900', 'barang/coffee_bag/arutala/naturalseries_kerinci.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/arutala/kerinci.html">Detail</button>
 					</div>
 				</div>
 			</div>
 
 		</div>
 	</div>
-
+	
 	<!-- Item Barang End -->
-
+	
 	<!-- Item Barang2 -->
 	<div class="container text-center" id="favorit">
 		<div class="row align-items-start mt-5">
@@ -216,10 +239,11 @@
 						<h6 class="card-title text-item-coffee">Kerinci Natural Aerobic</h6>
 						<p>Rp67.900 - Rp202.900</p>
 						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Kerinci Natural Aerobic', 'Rp67.900 - Rp202.900', 'barang/coffee_bag/sakha/blueberry.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/sakha/blueberry.html">Detail</button>
 					</div>
 				</div>
 			</div>
-
+			
 			<div class="col">
 				<div data-tilt data-tilt-axis="x" class="card barang mb-4">
 					<img src="barang/coffee_bag/sakha/glorycherry.jfif" class="card-img-top">
@@ -227,10 +251,11 @@
 						<h6 class="text-item-coffee card-title">Ijen Lestari</h6>
 						<p>Rp67.900 - Rp227.900</p>
 						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Ijen Lestari', 'Rp67.900 - Rp227.900', 'barang/coffee_bag/sakha/glorycherry.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/sakha/ijenlestari.html">Detail</button>
 					</div>
 				</div>
 			</div>
-
+			
 			<div class="col">
 				<div data-tilt data-tilt-axis="x" class="card barang mb-4">
 					<img src="barang/coffee_bag/sakha/sweetbouquet.jfif" class="card-img-top">
@@ -238,33 +263,36 @@
 						<h6 class="card-title text-item-coffee">Sweet Bouquet</h6>
 						<p>Rp97.900 - Rp252.900</p>
 						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Sweet Bouquet', 'Rp97.900 - Rp252.900', 'barang/coffee_bag/sakha/sweetbouquet.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/sakha/bouquet.html">Detail</button>
 					</div>
 				</div>
 			</div>
-
+			
 			<!--  -->
 			<div class="col">
 				<div data-tilt data-tilt-axis="x" class="card barang mb-4">
 					<img src="barang/coffee_bag/sakha/semendo.jfif" class="card-img-top">
 					<div class="card-body">
 						<h6 class="card-title text-item-coffee">Semendo 200gr</h6>
-						<p>Rp82.900</p>
-						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Semendo 200gr', 'Rp82.900', 'barang/coffee_bag/sakha/semendo.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<p>Rp72.900</p>
+						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Semendo 200gr', 'Rp72.900', 'barang/coffee_bag/sakha/semendo.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/sakha/semendo.html">Detail</button>
 					</div>
 				</div>
 			</div>
-
+			
 			<div class="col">
 				<div data-tilt data-tilt-axis="x" class="card barang mb-4">
 					<img src="barang/coffee_bag/sakha/peaberry.jfif" class="card-img-top">
 					<div class="card-body">
 						<h6 class="card-title text-item-coffee">Gayo Peaberry 200gr</h6>
-						<p>Rp72.900</p>
-						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Gayo Peaberry 200gr', 'Rp72.900', 'barang/coffee_bag/sakha/peaberry.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<p>Rp82.900</p>
+						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Gayo Peaberry 200gr', 'Rp82.900', 'barang/coffee_bag/sakha/peaberry.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/sakha/gayopeaberry.html">Detail</button>
 					</div>
 				</div>
 			</div>
-
+			
 			<div class="col">
 				<div data-tilt data-tilt-axis="x" class="card barang mb-4">
 					<img src="barang/coffee_bag/sakha/malabar.jfif" class="card-img-top">
@@ -272,6 +300,7 @@
 						<h6 class="card-title text-item-coffee">Malabar FullWash 200gr</h6>
 						<p>Rp72.900</p>
 						<a href="#produk" class="btn btn-secondary" onclick="addToCart('Malabar FullWash 200gr', 'Rp72.900', 'barang/coffee_bag/sakha/malabar.jfif')">Checkout <i class="bi bi-cart-plus"></i></a>
+						<button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#detailModal" data-url="detailProduct/coffeebag/sakha/malabar.html">Detail</button>
 					</div>
 				</div>
 			</div>
@@ -280,6 +309,29 @@
 		</div>
 	</div>
 	<!-- Item Barang2 End -->
+
+	<!-- Detai Produk -->
+
+	<div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="detailModalLabel">Detail Produk</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+				<!-- Konten detail -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Detail Produk endi -->
 
 	<!-- Footer -->
 
@@ -319,7 +371,9 @@
 		</footer>
 	</div>
 
-	<script type="text/javascript" src="vanilla-tilt.min.js"></script>
+	<!-- Java Script -->
+
+	<script type="text/javascript" src="javascript/vanilla-tilt.min.js"></script>
 	<script type="text/javascript">
 		VanillaTilt.init(document.querySelectorAll(".rekomendation"), {
 			max: 25,
@@ -329,101 +383,32 @@
         //It also supports NodeList
         // VanillaTilt.init(document.querySelectorAll(".your-element"));
     </script>
+	<script type="text/javascript" src="javascript/cart.js"></script>
+	<script type="text/javascript" src="javascript/order.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script>
-
-    	let cart = [];
-
-	    function addToCart(productName, productPrice, productImage) {
-		    // Ambil data keranjang dari Local Storage
-		    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-		    // Tambahkan produk ke keranjang
-		    cart.push({ name: productName, price: productPrice, image: productImage });
-
-		    // Simpan kembali keranjang ke Local Storage
-		    localStorage.setItem('cart', JSON.stringify(cart));
-
-		    // Perbarui jumlah item di ikon keranjang
-		    updateCartCount();
-
-		    // Perbarui tampilan keranjang
-		    updateCartDisplay();
-		}
-
-	    function checkout() {
-		    console.log('checkout clicked'); // Debugging
-
-		    // Ambil data keranjang dari Local Storage
-		    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-		    let message = 'Saya ingin memesan produk berikut:\n';
-		    cart.forEach(item => {
-		        message += `- ${item.name} (${item.price})\n`;
-		    });
-		    const encodedMessage = encodeURIComponent(message);
-		    const whatsappUrl = `https://wa.me/+628990763604?text=${encodedMessage}`;
-		    console.log(whatsappUrl); // Debugging
-		    window.open(whatsappUrl, '_blank');
-		}
-
-	    function removeFromCart(index) {
-	        // Ambil data keranjang dari Local Storage
-	        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-	        // Hapus item dari keranjang
-	        cart.splice(index, 1);
-
-	        // Simpan kembali keranjang ke Local Storage
-	        localStorage.setItem('cart', JSON.stringify(cart));
-
-	        // Perbarui jumlah item di ikon keranjang
-	        updateCartCount();
-
-	        // Perbarui tampilan keranjang
-	        updateCartDisplay();
-	    }
-
-	    function updateCartCount() {
-	        // Ambil data keranjang dari Local Storage
-	        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-	        // Perbarui jumlah item di ikon keranjang
-	        document.getElementById('cart-count').textContent = cart.length;
-	    }
-
-	    function updateCartDisplay() {
-	        const cartItems = document.getElementById('cart-items');
-	        cartItems.innerHTML = '';
-
-	        // Ambil data keranjang dari Local Storage
-	        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-	        cart.forEach((item, index) => {
-	            const li = document.createElement('li');
-	            li.className = 'list-group-item cart-item';
-	            
-	            li.innerHTML = `
-	                <img src="${item.image}" alt="${item.name}">
-	                <div class="cart-item-info">
-	                    ${item.name} - ${item.price}
-	                </div>
-	                <button class="bi bi-trash" onclick="removeFromCart(${index})"></button>
-	            `;
-
-	            cartItems.appendChild(li);
-	        });
-	    }
-
-	    // Panggil fungsi ini untuk memperbarui jumlah item di ikon keranjang saat halaman dimuat
-	    window.onload = function() {
-	        updateCartCount();
-	        updateCartDisplay();
-	    };
-
+	<script>
+		$('#detailModal').on('show.bs.modal', function (event) {
+		  var button = $(event.relatedTarget);
+		  var url = button.data('url');
+	  
+		  var modal = $(this);
+		  $.ajax({
+			url: url,
+			success: function (data) {
+			  modal.find('.modal-body').html(data);
+			},
+			error: function() {
+			  modal.find('.modal-body').html('<p>Error loading content</p>');
+			}
+		  });
+		});
 	</script>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Java Script End -->
 
 </body>
 </html>
